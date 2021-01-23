@@ -1,8 +1,8 @@
 
-src/vendor/
+vendor/
 
 \.idea/
 /logs
 
-src/composer.lock
+composer.lock
 *.lock
