@@ -4,5 +4,4 @@ vendor/
 \.idea/
 /logs
 
-composer.lock
-*.lock
+
