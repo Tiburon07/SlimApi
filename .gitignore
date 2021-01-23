@@ -1,0 +1,8 @@
+
+src/vendor/
+
+\.idea/
+/logs
+
+src/composer.lock
+*.lock

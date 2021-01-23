@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='pragma' content='no-cache'>
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/themify-icons.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/metisMenu.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/slicknav.min.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/typography.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/default.min.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/styles.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/responsive.css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/datatables.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/leaflet.css" type="text/css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/leaflet.pm.css" type="text/css">
+    <link rel="stylesheet" href="{{ assetCSS }}/vendor/easy-button.css" type="text/css">
+    <link rel="stylesheet" href="{{ assetCSS }}/app.css" type="text/css">
+
+    <!-- JAVSCRIPT -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ googleKey }}" async defer></script>
+    <script src="{{ assetJS }}/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{{ assetJS }}/vendor/jsts.min.js"></script>
+    <script src="{{ assetJS }}/vendor/proj4-2.5.0.min.js"></script>
+    <script src="{{ assetJS }}/vendor/leaflet.js"></script>
+    <script src="{{ assetJS }}/vendor/leaflet.pm.min.js"></script>
+    <script src="{{ assetJS }}/vendor/leaflet.control.custom.js"></script>
+    <script src="{{ assetJS }}/vendor/leaflet-touch-helper.js"></script>
+    <script src="{{ assetJS }}/vendor/leaflet.google.mutant.js"></script>
+    <script src="{{ assetJS }}/vendor/easy-button.js"></script>
+    <script src="{{ assetJS }}/vendor/amchart/core.js"></script>
+    <script src="{{ assetJS }}/vendor/amchart/charts.js"></script>
+    <script src="{{ assetJS }}/vendor/amchart/maps.js"></script>
+    <script src="{{ assetJS }}/vendor/amchart/themes/animated.js"></script>
+
+    {% block extraHead %}{% endblock %}
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            {% block instanceObject %}{% endblock %}
+            {% block documentReady %}{% endblock %}
+        });
+    </script>
+    <div class="page-container">
+
+        <div class="sidebar-menu">
+            {% include('menuBar.twig') %}
+        </div>
+        <div class="main-content">
+            <div class="header-area">
+                <div class="row align-items-center">
+                    {% include('infoBar.twig') %}
+                </div>
+            </div>
+            <div class="page-title-area"></div>
+            <div class="main-content-inner">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-area">
+                <p>Api - GeoSystems S.r.l.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="{{ assetJS }}/vendor/jquery-2.2.4.min.js"></script>
+    <script src="{{ assetJS }}/vendor/jquery-ui-1.12.1.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{{ assetJS }}/vendor/popper.min.js"></script>
+    <script src="{{ assetJS }}/vendor/bootstrap.min.js"></script>
+    <script src="{{ assetJS }}/vendor/owl.carousel.min.js"></script>
+    <script src="{{ assetJS }}/vendor/metisMenu.min.js"></script>
+    <script src="{{ assetJS }}/vendor/jquery.slimscroll.min.js"></script>
+    <script src="{{ assetJS }}/vendor/jquery.slicknav.min.js"></script>
+    <script src="{{ assetJS }}/vendor/plugins.js"></script>
+    <script src="{{ assetJS }}/vendor/scripts.js"></script>
+    <script src="{{ assetJS }}/vendor/datatables.min.js"></script>
+</body>
+
+</html>
